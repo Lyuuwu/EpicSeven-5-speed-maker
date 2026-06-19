@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --clean --onedir --windowed --name "5 speed maker" --icon="icon.ico" --add-data="icon.ico:." --add-data="config.json:." --add-data="imgs:imgs" --collect-data customtkinter main.py
