@@ -411,10 +411,8 @@ class App(ctk.CTk):
         CropWindow(self, screenshot)
 
 if __name__ == '__main__':
-    # 整個程式停用輸入法（本 App 所有欄位都是 ASCII/數字，不需要中文輸入）。
-    # 必須在建立任何視窗之前呼叫，才會對 Tk 主視窗生效。
     try:
-        ctypes.windll.imm32.ImmDisableIME(-1)   # -1 = 對整個行程的所有執行緒生效
+        ctypes.windll.imm32.ImmDisableIME(-1) # only ASCII
     except Exception as e:
         print('ImmDisableIME failed:', e)
 
